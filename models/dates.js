@@ -9,6 +9,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate() {
       // define association here
+      Dates.belongsTo(models.User, {
+        foreignKey: {
+          allowNull: true,
+        }
+      });
     }
   }
   Dates.init(
