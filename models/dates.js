@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Dates.belongsTo(models.User, {
         foreignKey: {
-          allowNull: true,
+          allowNull: true
         }
       });
     }
