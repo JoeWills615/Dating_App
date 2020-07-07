@@ -1,4 +1,9 @@
 $(document).ready(() => {
+  $(".nav1").css("display", "inline-block"); //Register
+  $(".nav2").css("display", "inline-block"); //Login
+  $(".nav3").css("display", "none"); //Logout
+  $(".nav4").css("display", "none"); //Home
+  $(".nav5").css("display", "none"); //Sign in as
   // Getting references to our form and inputs
   const loginForm = $("form.login");
   const emailInput = $("input#email-input");

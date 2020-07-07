@@ -7,21 +7,30 @@
     <title>First Impression</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="../public/assets/css/first.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/first.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/814916b192.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="jumbotron jumbotron-fluid"
-        style="background-image: url(../public/assets/img/jumbotron_bg.jpg); background-size: cover;">
+        style="background-image: url(/assets/img/jumbotron_bg.jpg); background-size: cover;">
         <div class="container">
             <ul class="nav justify-content-end fixed-top">
                 <li class="nav-item">
-                    <a class="nav-link text-white" id="login" href="/login">Login</a>
+                    <a class="nav1 nav-link text-white" id="login" href="/login">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" id="signup" href="/">Signup</a>
+                    <a class="nav2 nav-link text-white" id="signup" href="/signup">Signup</a>
+                </li>
+                <li class="nav-item">
+                    <a class=" nav3 nav-link text-white" id="logout" href="/logout">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav4 nav-link text-white" id="members" href="/members">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav5 nav-link text-white" href="#">Sign in as : <span class="member-name"></span></a>
                 </li>
             </ul>
             <h1 class="display-4 text-center text-white" id="header">First Impression</h1>
@@ -52,7 +61,7 @@
         <div class="row m-2">
             <div class="col-md-4 pt-3">
                 <div class="card border-info"
-                    style="background-image: url(../public/assets/img/food_card.jpg); background-size: cover;">
+                    style="background-image: url(/assets/img/food_card.jpg); background-size: cover;">
                     <div class="card-body m-5" style="height: 12rem;">
                         <div class="overlay">
                             <h3 class="card-title text-white">Dinner</h3>
@@ -64,7 +73,7 @@
             </div>
             <div class="col-md-4 pt-3">
                 <div class="card border-info"
-                    style="background-image: url(../public/assets/img/coffee_card.jpg); background-size: cover;">
+                    style="background-image: url(/assets/img/coffee_card.jpg); background-size: cover;">
                     <div class="card-body m-5" style="height: 12rem;">
 
                         <div class="overlay">
@@ -77,7 +86,7 @@
             </div>
             <div class="col-md-4 pt-3">
                 <div class="card border-info"
-                    style="background-image: url(../public/assets/img/dessert_card.jpg); background-size: cover;">
+                    style="background-image: url(/assets/img/dessert_card.jpg); background-size: cover;">
                     <div class="card-body m-5" style="height: 12rem;">
                         <div class="overlay">
                             <h3 class="card-title text-white">Dessert</h3>
@@ -145,7 +154,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
-        <script src="/public/js/home.js"></script>
+    <script src="/js/home.js"></script>
 </body>
 
 </html>

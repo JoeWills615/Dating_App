@@ -7,7 +7,7 @@ CREATE TABLE datess
 (
 	id int NOT NULL AUTO_INCREMENT,
 	name VARCHAR(255) NOT NULL,
-    TIME_FORMAT(start_at, '%h:%i %p') start_at,
+    -- TIME_FORMAT(start_at, '%h:%i %p') start_at,
 	location VARCHAR(255) NOT NULL,
     type VARCHAR(255) NOT NULL,
 	PRIMARY KEY (id)
