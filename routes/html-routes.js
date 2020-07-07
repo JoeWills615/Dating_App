@@ -88,7 +88,7 @@ module.exports = function(app) {
 
 // search dates
 app.get("/api/dates", (req, res) => {
-  db.Drink.findAll({
+  db.Dates.findAll({
     where: {
       type: "dates"
     },
