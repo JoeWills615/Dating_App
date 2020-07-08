@@ -39,9 +39,16 @@ app.get("/api/dates", (req, res) => {
   }).then((results) => {
     res.json(results);
   });
-});
 
-module.exports = app;
+
+  app.get("/signup", (req, res) => {
+    // If the user doesn't hava an account send them to the signup page
+    if (req.user) {
+      res.redirect("/signup");
+    }
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
+  });
+};
 
 //  // user member
 // app.get("/members", isAuthenticated, function(req, res) {
