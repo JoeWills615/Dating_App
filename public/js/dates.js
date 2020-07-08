@@ -7,7 +7,7 @@ $(document).ready(() => {
   $("select").on("change", function(event) {
     event.preventDefault();
     console.log("==========================");
-    console.log("name AND where");
+    console.log("name, where, typeOfDate");
     console.log(
       $(this)
         .val()
@@ -18,6 +18,7 @@ $(document).ready(() => {
       whereInput: where.val().trim(),
       typeOfDateInput: typeOfDate.val().trim()
     };
+    console.log(userInput);
     if (!userInput.nameInput || !userInput.whereInput) {
       return;
     }
