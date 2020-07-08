@@ -51,4 +51,12 @@ module.exports = function(app) {
       });
     }
   });
+
+    // search dates
+    app.post("/api/dates", (req, res) => {
+      console.log(req.body);
+      db.Date.create(req.body).then(results => {
+        res.json(results);
+      });
+    });
 };

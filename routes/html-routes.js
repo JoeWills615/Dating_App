@@ -4,6 +4,8 @@ const path = require("path");
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
+const db = require("../models");
+
 module.exports = function(app) {
   app.get("/", (req, res) => {
     // If the user already has an account send them to the members page
@@ -27,24 +29,20 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
-  // search dates
-  app.get("/api/dates", (req, res) => {
-    db.Dates.findAll({
-      where: {
-        type: "dates"
-      },
-      include: [db.name, db.where, db.typeOfDate]
-    }).then(results => {
-      res.json(results);
-    });
-  });
-
-
   app.get("/signup", (req, res) => {
     // If the user doesn't hava an account send them to the signup page
     if (req.user) {
       res.redirect("/signup");
     }
     res.sendFile(path.join(__dirname, "../public/signup.html"));
+  });
+
+  app.get("/dates-results", (req, res) => {
+      db.Date.findAll({}).then(results => {
+        console.log(results);
+        const dates = JSON.parse(JSON.stringify(results));
+        res.render("view", {dates: dates});
+      });
+      
   });
 };

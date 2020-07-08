@@ -3,7 +3,7 @@ $(document).ready(() => {
   // Getting references to our form and inputs
   const name = $("#name");
   const where = $("#where");
-  // const typeOfDate = $("typeOfDate");
+  const typeOfDate = $("#typeOfDate");
 
   $(document).on("submit", "dates-form", handleDatesFormSubmit);
 
@@ -32,24 +32,25 @@ $(document).ready(() => {
         .trim()
     );
     const userInput = {
-      nameInput: name.val().trim(),
-      whereInput: where.val().trim()
-      // typeOfDateInput: typeOfDate.val().trim()
+      name: name.val().trim(),
+      location: where.val().trim(),
+      typeOfDate: typeOfDate.val().trim()
     };
     console.log(userInput);
-    if (!userInput.nameInput || !userInput.whereInput) {
-      return;
-    }
-    getDates(userInput.nameInput, userInput.whereInput);
+    setDate(userInput);
   });
 
-  function getDates(name, where) {
+  function setDate(data) {
+    console.log(data);
+
     $.ajax({
-      method: "GET",
-      url: "/api/dates/" + where
+      method: "POST",
+      url: "/api/dates",
+      data: data
     })
       .then(() => {
-        window.location.replace("/dates-results");
+        console.log("Success");
+        // window.location.replace("/dates-results");
         // If there's an error, log the error
       })
       .catch(err => {
