@@ -61,7 +61,7 @@ module.exports = function(app) {
 
   // Delete Dates
   app.delete("/api/dates/:id", async (req, res) => {
-    const dbDate = await db.Date.destroy({ where: { id } });
+    const dbDate = await db.Date.destroy({ where: req.params });
     res.json(dbDate);
   });
 };

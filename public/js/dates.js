@@ -63,7 +63,7 @@ $(document).ready(() => {
     event.preventDefault();
     const id = $(this).data("id");
     // Send the DELETE request.
-    $.ajax("/api/dates" + id, {
+    $.ajax("/api/dates/" + id, {
       type: "DELETE"
     }).then(() => {
       console.log("deleted date", id);
