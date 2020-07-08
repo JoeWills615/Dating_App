@@ -39,7 +39,6 @@ $(document).ready(() => {
     console.log(userInput);
     setDate(userInput);
   });
-
   function setDate(data) {
     console.log(data);
 
@@ -57,4 +56,18 @@ $(document).ready(() => {
         console.log(err);
       });
   }
+
+  //working on delete function
+  $("#btn-delete").on("click", function(event) {
+    console.log("delete clicked");
+    event.preventDefault();
+    const id = $(this).data("id");
+    // Send the DELETE request.
+    $.ajax("/api/dates" + id, {
+      type: "DELETE"
+    }).then(() => {
+      console.log("deleted date", id);
+      location.reload();
+    });
+  });
 });

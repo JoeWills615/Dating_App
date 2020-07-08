@@ -1,7 +1,6 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
-const { Op } = require("sequelize");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -52,11 +51,17 @@ module.exports = function(app) {
     }
   });
 
-    // search dates
-    app.post("/api/dates", (req, res) => {
-      console.log(req.body);
-      db.Date.create(req.body).then(results => {
-        res.json(results);
-      });
+  // search dates
+  app.post("/api/dates", (req, res) => {
+    console.log(req.body);
+    db.Date.create(req.body).then(results => {
+      res.json(results);
     });
+  });
+
+  // Delete Dates
+  app.delete("/api/dates/:id", async (req, res) => {
+    const dbDate = await db.Date.destroy({ where: { id } });
+    res.json(dbDate);
+  });
 };
