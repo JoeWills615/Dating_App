@@ -26,6 +26,14 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
+
+  app.get("/signup", (req, res) => {
+    // If the user doesn't hava an account send them to the signup page
+    if (req.user) {
+      res.redirect("/signup");
+    }
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
+  });
 };
 
 //  // user member
