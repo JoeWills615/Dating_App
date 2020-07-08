@@ -3,11 +3,11 @@ $(document).ready(() => {
   // Getting references to our form and inputs
   const name = $("#name");
   const where = $("#where");
-  const typeOfDate = $("typeOfDate");
+  const typeOfDate = $("#typeOfDate");
 
   $(document).on("submit", "dates-form", handleDatesFormSubmit);
 
-  getDates();
+  // getDates();
 
   function handleDatesFormSubmit(event) {
     event.preventDefault();
@@ -32,71 +32,29 @@ $(document).ready(() => {
         .trim()
     );
     const userInput = {
-      nameInput: name.val().trim(),
-      whereInput: where.val().trim(),
-      typeOfDateInput: typeOfDate.val().trim()
+      name: name.val().trim(),
+      location: where.val().trim(),
+      typeOfDate: typeOfDate.val().trim()
     };
     console.log(userInput);
-    if (!userInput.nameInput || !userInput.whereInput) {
-      return;
-    }
-    getDates(userInput.nameInput, userInput.whereInput);
+    setDate(userInput);
   });
 
-  function getDates(name, where) {
-    $.get("/api/Dates/:where", {
-      where: where,
-      name: name
+  function setDate(data) {
+    console.log(data);
+
+    $.ajax({
+      method: "POST",
+      url: "/api/dates",
+      data: data
     })
       .then(() => {
-        window.location.replace("/dates-results");
+        console.log("Success");
+        // window.location.replace("/dates-results");
         // If there's an error, log the error
       })
       .catch(err => {
         console.log(err);
       });
   }
-});
-
-$(document).ready(() => {
-  // Getting references to our form and inputs
-  const name = $("#name");
-  const where = $("#where");
-  const typeOfDate = $("#typeOfDate");
-
-  // when user clicks add-btn
-  $("#add-btn").on("click", event => {
-    event.preventDefault();
-
-    // make a newDate obj
-    const newDate = {
-      // name from name input
-      name: $(name)
-        .val()
-        .trim(),
-      // where from where input
-      where: $(where)
-        .val()
-        .trim(),
-      // typeOfDate from typeOfDate input
-      typeOfDate: $(typeOfDate)
-        .val()
-        .trim()
-    };
-
-    // send an AJAX POST-request with jQuery
-    $.post("/api/new", newDate)
-      // on success, run this callback
-      .then(data => {
-        // log the data we found
-        console.log(data);
-        // tell the user we're adding a Date with an alert window
-        alert("Adding Date...");
-      });
-
-    // empty each input box by replacing the value with an empty string
-    $(name).val("");
-    $(where).val("");
-    $(typeOfDate).val("");
-  });
 });

@@ -3,7 +3,7 @@ DROP DATABASE IF EXISTS dates_db;
 CREATE DATABASE dates_db;
 USE dates_db;
 
-CREATE TABLE datess
+CREATE TABLE dates
 (
 	id int NOT NULL AUTO_INCREMENT,
 	name VARCHAR(255) NOT NULL,
