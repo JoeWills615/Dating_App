@@ -36,13 +36,11 @@ module.exports = function(app) {
     }
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
-
+  
   app.get("/dates-results", (req, res) => {
       db.Date.findAll({}).then(results => {
         console.log(results);
         const dates = JSON.parse(JSON.stringify(results));
         res.render("view", {dates: dates});
       });
-      
-  });
 };
