@@ -1,3 +1,11 @@
+$(document).ready(() => {
+  $(".nav1").css("display", "inline-block"); //Register
+  $(".nav2").css("display", "inline-block"); //Login
+  $(".nav3").css("display", "none"); //Logout
+  $(".nav4").css("display", "none"); //Home
+  $(".nav5").css("display", "none"); //Sign in as
+});
+
 $("#add-btn").on("click", event => {
   event.preventDefault();
 

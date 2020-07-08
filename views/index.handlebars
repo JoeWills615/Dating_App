@@ -1,0 +1,116 @@
+<div class="jumbotron jumbotron-fluid"
+    style="background-image: url(/assets/img/jumbotron_bg.jpg); background-size: cover;">
+    <div class="container">
+        <ul class="nav justify-content-end fixed-top">
+            <li class="nav-item">
+                <a class="nav-link text-white" id="login" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" id="signup" href="/signup">Signup</a>
+            </li>
+        </ul>
+        <h1 class="display-4 text-center text-white" id="header">First Impression</h1>
+        <p class="lead text-center text-white" id="title">Let us help you plan your date.</p>
+        <div class="row justify-content-center">
+            <div class="input-group mb-3 col-md-6">
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-light dropdown-toggle bg-info" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"><i class="fas fa-map-marker-alt"></i></button>
+                </div>
+                <input type="text" class="form-control input-lg" placeholder="Find a restaraunt in your area"
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-light bg-info" type="button" id="button-addon2 location-btn"><span><i
+                                class="fas fa-search"></i></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row m-2">
+        <div class="col-md-4 pt-3">
+            <div class="card border-info"
+                style="background-image: url(/assets/img/food_card.jpg); background-size: cover;">
+                <div class="card-body m-5" style="height: 12rem;">
+                    <div class="overlay">
+                        <h3 class="card-title text-white">Dinner</h3>
+                        <h5 class="text-white">Restaurants Near You</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 pt-3">
+            <div class="card border-info"
+                style="background-image: url(/assets/img/coffee_card.jpg); background-size: cover;">
+                <div class="card-body m-5" style="height: 12rem;">
+
+                    <div class="overlay">
+                        <h3 class="card-title text-white">Coffee</h3>
+                        <h5 class="text-white">Coffee Shops Close By</h5>
+                    </div>
+                    <!-- <div class="widget_wrap" style="width:320px;height:400px;display:inline-block;"><iframe src="https://www.zomato.com/widgets/res_search_widget.php?city_id=1138&establishment_type=286&theme=dark&hideCitySearch=on&hideResSearch=on&sort=popularity" style="position:relative;width:100%;height:100%;" border="0" frameborder="0"></iframe></div> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 pt-3">
+            <div class="card border-info"
+                style="background-image: url(/assets/img/dessert_card.jpg); background-size: cover;">
+                <div class="card-body m-5" style="height: 12rem;">
+                    <div class="overlay">
+                        <h3 class="card-title text-white">Dessert</h3>
+                        <h5 class="text-white">Share a sweet treat</h5>
+                    </div>
+                    <!-- <div class="widget_wrap" style="width:320px;height:400px;display:inline-block;"><iframe src="https://www.zomato.com/widgets/res_search_widget.php?city_id=1138&establishment_type=23&theme=dark&hideCitySearch=on&hideResSearch=on&sort=popularity" style="position:relative;width:100%;height:100%;" border="0" frameborder="0"></iframe></div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="row justify-content-center m-2">
+
+        <div class="col-lg-6">
+
+            <div class="card border-info">
+                <div class="card-header">
+                    Make A Date
+                </div>
+                <div class="card-body">
+                    <form action="" method="POST" role="form">
+
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">When</label>
+                            <input type="date" class="form-control" id="when">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Where</label>
+                            <input type="text" class="form-control" id="where">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Type of Date</label>
+                            <input type="text" class="form-control" id="typeOfDate" placeholder="">
+                        </div>
+
+                    </form>
+                    <br>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-info btn-md" id="add-btn create">
+                            <span class="fas fa-clock"></span>Schedule</button>
+                        <button type="submit" class="btn btn-info btn-md" id="add-btn view">
+                            <span class="fas fa-eye"></span>View Dates</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
