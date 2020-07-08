@@ -50,7 +50,7 @@ $(document).ready(() => {
     })
       .then(() => {
         console.log("Success");
-        // window.location.replace("/dates-results");
+        window.location.replace("/dates-results");
         // If there's an error, log the error
       })
       .catch(err => {
