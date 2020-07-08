@@ -46,4 +46,18 @@ module.exports = function(app) {
     }
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
+
+  app.get("/view", (req, res) => {
+    if (req.user) {
+      res.redirect("/view");
+    }
+    res.sendFile(path.join(__dirname, "../public/view.html"));
+  });
+
+  app.get("/all", (req, res) => {
+    if (req.user) {
+      res.redirect("/all");
+    }
+    res.sendFile(path.join(__dirname, "../public/all.html"));
+  });
 };

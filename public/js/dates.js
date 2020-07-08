@@ -62,7 +62,7 @@ $(document).ready(() => {
   // Getting references to our form and inputs
   const name = $("#name");
   const where = $("#where");
-  const typeOfDate = $("typeOfDate");
+  const typeOfDate = $("#typeOfDate");
 
   // when user clicks add-btn
   $("#add-btn").on("click", event => {
@@ -71,15 +71,15 @@ $(document).ready(() => {
     // make a newDate obj
     const newDate = {
       // name from name input
-      name: $("#name")
+      name: $(name)
         .val()
         .trim(),
       // where from where input
-      where: $("#where")
+      where: $(where)
         .val()
         .trim(),
       // typeOfDate from typeOfDate input
-      typeOfDate: $("#typeOfDate")
+      typeOfDate: $(typeOfDate)
         .val()
         .trim()
     };
@@ -95,8 +95,8 @@ $(document).ready(() => {
       });
 
     // empty each input box by replacing the value with an empty string
-    $("#name").val("");
-    $("#where").val("");
-    $("#typeOfDate").val("");
+    $(name).val("");
+    $(where).val("");
+    $(typeOfDate).val("");
   });
 });
