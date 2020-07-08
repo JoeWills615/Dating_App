@@ -44,9 +44,9 @@ $(document).ready(() => {
   });
 
   function getDates(name, where) {
-    $.get("/api/Dates/:where", {
-      where: where,
-      name: name
+    $.ajax({
+      method: "GET",
+      url: "/api/dates/" + where
     })
       .then(() => {
         window.location.replace("/dates-results");

@@ -39,6 +39,7 @@ module.exports = function(app) {
     });
   });
 
+
   app.get("/signup", (req, res) => {
     // If the user doesn't hava an account send them to the signup page
     if (req.user) {
