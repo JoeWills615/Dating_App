@@ -60,22 +60,38 @@ Heroku - https://pacific-basin-52237.herokuapp.com/
 # Technology_Used
 
 Heroku
+
 JAWSdb
+
 MYSQL
+
 API (Zomato)
+
 Sequelize
+
 ESLint
+
 Handlebars
+
 JavaScript
+
 Jquery
+
 Node
+
 Bootstrap
+
 GitHub
+
 Travis
+
 HTML/CSS
 
 # Contributors
 Chris Ferguson (cfergus7)
+
 Joe King (jking0186)
+
 Joe Wills (JoeWills615)
+
 Violet Dreyfuss (DaVioletDeath)
