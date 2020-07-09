@@ -22,32 +22,27 @@ social events.
 
 # Images
 
-<img src="./images/note_taker_01.PNG">
+<img src="./FIpictures/first_impression_01.PNG">
 
   <br/>
   <br/>
 
-  <img src="./images/note_taker_02.PNG">
+  <img src="./FIpictures/first_impression_02.PNG">
   
   <br/>
   <br/>
 
-  <img src="./images/note_taker_03.PNG">
+  <img src="./FIpictures/first_impression_03.PNG">
 
   <br/>
   <br/>
 
-  <img src="./images/note_taker_04.PNG">
+  <img src="./FIpictures/first_impression_04.PNG">
 
   <br/>
   <br/>
 
-  <img src="./images/note_taker_05.PNG">
-
-  <br/> 
-  <br/>
-
-  <img src="./images/note_taker_06.PNG">
+  <img src="./FIpictures/first_impression_05.png">
 
   <br/>
 
